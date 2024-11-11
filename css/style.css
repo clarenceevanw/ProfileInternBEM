@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(../img/codioful-formerly-gradienta-bKESVqfxass-unsplash.jpg) center/cover no-repeat;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-container {
+  position: relative;
+  width: 90%; /* Adjust for mobile devices */
+  max-width: 30rem; /* Max width for larger screens */
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 1rem; /* Add margin for smaller screens */
+}
+
+.slider-container h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 8px;
+}
+
+.profile {
+  min-width: 100%;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.profile .person-description {
+  margin: 20px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.profile .social-media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.profile .social-media .instagram, 
+.profile .social-media .linked-in {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: rgb(0, 81, 202);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  width: auto; /* Set fixed width */
+  justify-content: center; /* Center content horizontally */
+}
+
+a {
+  text-decoration: none;
+  padding: 1.2rem 1.2rem;
+  display: flex;
+  gap: 5px;
+  font-size: 1rem;
+}
+
+.profile .social-media .instagram:hover, .profile .social-media .linked-in:hover{
+  background-color: rgb(41, 93, 172);
+}
+.prev, .next {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(0, 81, 202);
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev {
+  left: 3rem;
+}
+
+.next {
+  right: 3rem;
+}
+
+/* Dots styling */
+.dots-container {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: rgb(0, 81, 202);
+}
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+  
+  .slider-container {
+    max-width: 20rem;
+  }
+
+  .profile h2 {
+    font-size: 1.3rem;
+  }
+
+  .profile img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .prev, .next {
+    width: 2rem;
+    height: 2rem;
+    top: 50%;
+  }
+
+  .prev {
+    left: 2rem;
+  }
+
+  .next {
+    right: 2rem;
+  }
+}
+
+/* Media query for mobile phones */
+@media (max-width: 480px) {
+  .slider-container {
+    max-width: 10rem;
+  }
+
+  .profile {
+    padding: 1.5rem;
+  }
+
+  .profile h2 {
+    font-size: 1.1rem;
+  }
+
+  .profile img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .profile .person-description {
+    font-size: 0.8em;
+  }
+
+  .prev, .next {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .prev {
+    left: 1rem;
+  }
+
+  .next {
+    right: 1rem;
+  }
+}
